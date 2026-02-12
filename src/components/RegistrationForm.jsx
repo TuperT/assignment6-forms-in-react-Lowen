@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
+    const [termsVisible, setTermsVisible] = useState(false)
     const [error, setError] = useState("")
     const [submittedData, setSubmittedData] = useState(null)
     const [formData, setFormData] = useState({
@@ -121,7 +122,7 @@ const RegistrationForm = () => {
                             checked={formData.acceptTerms}
                             onChange={handleChange} 
                         />
-                        Accept Terms And Condition
+                        Accept <span id="terms-and-condition" onClick={() => setTermsVisible(true)}>Terms And Condition</span>
                     </div>
 
                     <button 
@@ -135,6 +136,19 @@ const RegistrationForm = () => {
                 <hr />
                 <p id="error-text">{error}</p>
             </div>
+
+            {termsVisible && (
+                <div id="terms">
+                    <h2>Terms and Conditions</h2>
+                    <hr />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    </p>
+                    <button onClick={() => setTermsVisible(false)}>Close terms</button>
+                </div>
+            )}
 
             {submittedData &&(
                 <div id="registration-sumarry">

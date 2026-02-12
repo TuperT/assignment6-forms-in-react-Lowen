@@ -26,7 +26,8 @@
 }
 
 #registration-form-btn {
-  background-color: #3b82f6;;
+  background-color: #3b82f6;
+  color: white;
 }
 
 .registration-form label {
@@ -73,4 +74,32 @@
 
 #registration-sumarry p {
   color: grey;
+}
+
+#terms-and-condition {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#terms {
+  height: 400px;
+  width: 600px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px_20px_207px_0px_rgba(165,_39,_255,_0.48);
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+#terms h2 {
+  color: #3b82f6;
+}
+
+#terms button {
+  background-color: #3b82f6;
+  color: white;
 }
